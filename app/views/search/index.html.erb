@@ -1,1 +1,10 @@
-<%binding.pry%>
+<h2>Order of the Phoenix Members for <%=@characters.first[:house]%></h2>
+<h3><%=@characters.length%>Total Memebers</h3>
+
+<%@characters.each do |character|%>
+  <h4><%=character[:name]%></h4>
+  <p><%=character[:house]%></p>
+  <p><%=character[:role] if !character[:role].nil?%></p>
+  <p><%=character[:patronus] if !character[:patronus].nil?%></p>
+  <br>
+<%end%>
